@@ -60,5 +60,6 @@ namespace FruitAPI.Controllers
             await _userService.DeleteUserInfoAsync(email);
             return NoContent();
         }
+        
     }
 }
