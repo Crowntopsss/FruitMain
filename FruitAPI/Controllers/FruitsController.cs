@@ -10,18 +10,17 @@ namespace FruitAPI.Controllers
     [Route("[controller]")]
     public class FruitsController : ControllerBase
     {
-        private readonly string _jsonFilePath;
+        private readonly IFruitService _fruitService;
 
-        public FruitsController(IWebHostEnvironment webHostEnvironment)
+        public FruitsController(IFruitService fruitService)
         {
-            _jsonFilePath = Path.Combine(webHostEnvironment.ContentRootPath, "Data", "fruit.json");
+            _fruitService = fruitService;
         }
 
         [HttpGet]
         public IEnumerable<Fruit> GetAllFruits()
         {
-            var jsonData = System.IO.File.ReadAllText(_jsonFilePath);
-            var fruits = JsonSerializer.Deserialize<IEnumerable<Fruit>>(jsonData);
+            var fruits = _fruitService.GetAllFruits();
             return fruits;
         }
     }

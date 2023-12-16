@@ -12,5 +12,6 @@ namespace FruitAPI.Data
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Fruit> Fruits { get; set; }
     }
 }
