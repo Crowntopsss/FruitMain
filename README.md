@@ -16,6 +16,8 @@ https://fruitappwp.azurewebsites.net/
 Controllers Path
 FruitAPI/Controllers
 
+Shared lib
+Helper
 
 UI Implementation: Done with Flutter Web
 Git: https://github.com/demimola24/FruitAppWeb
