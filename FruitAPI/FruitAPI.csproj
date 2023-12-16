@@ -22,5 +22,6 @@
     <PackageReference Include="NuGet.Frameworks" Version="6.5.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageReference Include="xUnit" Version="2.6.2" />
+    <ProjectReference Include="Helper/Helper.csprojj" />
   </ItemGroup>
 </Project>
